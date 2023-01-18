@@ -49,7 +49,9 @@ function game() {
     }
     if (playerScore > computerScore) {
         console.log("Congrats! You won the game.");
-    } else {
+    } else if (computerScore > playerScore) {
         console.log("Oops! You lose.");
+    } else {
+        console.log("It's a tie!");
     }
 }
