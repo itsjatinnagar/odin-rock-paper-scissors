@@ -1,3 +1,7 @@
+function capitalize(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+}
+
 function getComputerChoice() {
     const moves = ["Rock", "Paper", "Scissors"];
     const choice = Math.round(Math.random() * 2);
@@ -13,23 +17,17 @@ function playRound(playerSelection, computerSelection) {
         (playerSelection === "paper" && computerSelection === "scissors") ||
         (playerSelection === "scissors" && computerSelection === "rock")
     )
-        return `You Lose! ${
-            computerSelection.charAt(0).toUpperCase() +
-            computerSelection.slice(1)
-        } beats ${
-            playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)
-        }`;
+        return `You Lose! ${capitalize(computerSelection)} beats ${capitalize(
+            playerSelection
+        )}`;
     else if (
         (playerSelection === "paper" && computerSelection === "rock") ||
         (playerSelection === "scissors" && computerSelection === "paper") ||
         (playerSelection === "rock" && computerSelection === "scissors")
     )
-        return `You Won! ${
-            playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1)
-        } beats ${
-            computerSelection.charAt(0).toUpperCase() +
-            computerSelection.slice(1)
-        }`;
+        return `You Won! ${capitalize(playerSelection)} beats ${capitalize(
+            computerSelection
+        )}`;
     else return "It's a tie!";
 }
 
