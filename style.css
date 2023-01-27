@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
 
 :root {
     --light-text: hsl(0, 0%, 94%);
@@ -10,18 +10,33 @@
     padding: 0;
 }
 
+button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
 body {
+    height: 100vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 160px;
     background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
     color: var(--light-text);
-    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-family: "Barlow Semi Condensed", sans-serif;
     line-height: 1;
 }
 
-header {
+.container {
     max-width: 800px;
     width: 90%;
-    margin: 70px auto;
+}
+
+header {
     padding: 20px;
     display: flex;
     align-items: stretch;
@@ -49,4 +64,63 @@ header {
 .score-board h2 {
     font-size: 52px;
     color: hsl(229, 25%, 31%);
+}
+
+main .menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.display-move {
+    height: 200px;
+    width: 200px;
+    background-color: var(--light-text);
+    border: 30px solid;
+    border-radius: 50%;
+}
+
+.m-rock {
+    border-color: hsl(349, 71%, 52%);
+    box-shadow: inset 0 -6px 2px 4px hsla(349, 70%, 56%, 0.8);
+}
+
+.m-paper {
+    border-color: hsl(230, 89%, 62%);
+    box-shadow: inset 0 -6px 2px 4px hsla(230, 89%, 65%, 0.8);
+}
+
+.m-scissors {
+    border-color: hsl(39, 89%, 49%);
+    box-shadow: inset 0 -6px 2px 4px hsla(40, 84%, 53%, 0.8);
+}
+
+.result {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.result h4 {
+    font-size: 30px;
+}
+
+.result h5 {
+    font-size: 40px;
+}
+
+.result button {
+    margin-top: 20px;
+    padding: 16px 38px;
+    font-size: 20px;
+    background-color: var(--light-text);
+    border-radius: 10px;
+}
+
+.choice {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

@@ -1,23 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Rock Paper Scissors</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-</head>
-
-<body>
-    <header>
-        <img src="images/logo.svg" alt="rock-paper-scissors">
-        <div class="score-board">
-            <p>SCORE</p>
-            <h2 id="score" class="score"></h2>
-        </div>
-    </header>
-</body>
-
+    <body>
+        <header class="container">
+            <img src="images/logo.svg" alt="rock-paper-scissors" />
+            <div class="score-board">
+                <p>SCORE</p>
+                <h2 id="score" class="score"></h2>
+            </div>
+        </header>
+        <main class="container">
+            <div class="menu" style="display: none">
+                <button class="display-move move m-rock">
+                    <img src="images/icon-rock.svg" alt="hand-rock-icon" />
+                </button>
+                <button class="display-move move m-paper">
+                    <img src="images/icon-paper.svg" alt="hand-paper-icon" />
+                </button>
+                <button class="display-move move m-scissors">
+                    <img
+                        src="images/icon-scissors.svg"
+                        alt="hand-scissors-icon"
+                    />
+                </button>
+            </div>
+            <div class="result">
+                <div class="player-choice">
+                    <h4>YOU PICKED</h4>
+                    <div class="display-move choice m-paper">
+                        <img src="images/icon-paper.svg" alt="" />
+                    </div>
+                </div>
+                <div>
+                    <h5>YOU WIN</h5>
+                    <button>PLAY AGAIN</button>
+                </div>
+                <div class="computer-choice">
+                    <h4>COMPUTER PICKED</h4>
+                    <div class="display-move choice m-rock">
+                        <img src="images/icon-rock.svg" alt="" />
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
 </html>
